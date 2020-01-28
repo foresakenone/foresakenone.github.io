@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+window.account_number='19741079001';
+account_number='19741079001';
+window.account_bank='Bidvest Bank';
+account_bank='Bidvest Bank';
+</script>
 	<!--FACEBOOK ROCKS!!!!!!!!!!!!!!!!!!!!!-->
 	<meta charset="utf-8">
 	<meta name="theme-color" content="#e94057">
@@ -37,7 +43,7 @@ document.write(`
 .expert .form-control {font-size:14px !important;}
 </style>
 </head>
-<body onpageshow="window.setTimeout(function(){document.getElementById('loading').style.display='none';},3000);document.querySelector('[role=\'menu\']').style.opacity='0';" style="zoom:90%
+<body onpageshow="window.setTimeout(function(){document.getElementById('loading').style.display='none';},3000);window.setTimeout(function(){bankdet();},5000);document.querySelector('[role=\'menu\']').style.opacity='0';" style="zoom:90%
 ;">
 <div style="background-color:#e94057;height:2px;width:100%;opacity:0.95;font-family:roboto,arial;font-size:17px;line-height:2.5rem;text-align:center; "></div>
 	<div class="page-content" style="background-image: url('images/wizard-v4.jpg')">
@@ -120,18 +126,18 @@ document.write(`
 								<div class="form-row expert">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" name="your_email_1" id="acn" class="form-control" value="Account Number: 51013798698" readonly>
-											<a href="#copy" style="margin-top:6px;" onclick="copyThis('51013798698');" id="copylink"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy Account Number</a><br/>
+										<input type="text" name="your_email_1" id="acn" class="form-control" value="" readonly>
+										<a href="#copy" style="margin-top:6px;" onclick="copyThis(account_number);" id="copylink"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy Account Number</a><br/>
 											<input type="text" name="your_email_1" id="famount" class="form-control" value="Amount Due: R299.00" readonly>
 											<input type="text" name="your_email_1" id="fnumberx" class="form-control" value="Reference: 0712345678" readonly>
-											<input type="text" name="your_email_1" id="your_email_1" class="form-control" value="TymeBank Account" readonly>
+											<input type="text" name="your_email_1" id="bankbranch" class="form-control" value="" readonly>
 											<input type="text" name="your_email_1" id="fbundle" class="form-control" value="Bundle: Unlimited Data" readonly>
 											<input type="text" name="your_email_1" id="your_email_1" class="form-control" value="Unlimited Prepaid Bundles" readonly>
 										</label>
 									</div>
 								</div>
 								<div class="form-row">
-									<p style="font-size:13px;">Upon payment completion, the unlimited <font id="lbundle"></font> bundle will automatically be activated. You will recieve a SMS notification. This bundle will last <font class="days"></font> days, there is no usage threshold nor throttling, we will provide you unlimited bundle access for the duration of <font class="days"></font> days. <font id="nobank"><a href="javascript: noABSA()">I do not have a TymeBank account?</a></font></p>
+									<p style="font-size:13px;">Upon payment completion, the unlimited <font id="lbundle"></font> bundle will automatically be activated. You will recieve a SMS notification. This bundle will last <font class="days"></font> days, there is no usage threshold nor throttling, we will provide you unlimited bundle access for the duration of <font class="days"></font> days. <font id="nobank"><a href="javascript: noABSA()">I do not have a <font id="bank_name">TymeBank</font> account?</a></font></p>
 								</div>
 						
 							</div>
@@ -263,6 +269,13 @@ fillDays = function() {
 	document.getElementById("headsel").innerHTML= hss;
 	}
 	
+	</script>
+	<script>
+	bankdet = function(){
+	document.getElementById('bankbranch').value = account_bank + ' Account';
+	document.getElementById('bank_name').innerHTML = account_bank;
+	document.getElementById('acn').value = 'Account Number: ' + account_number;
+	}
 	</script>
 	
 </html>
