@@ -292,9 +292,9 @@ fillDays = function() {
         .split("&")
         .forEach(function (item) {
           tmp = item.split("=");
-          if (tmp[0] === "yearly") result = decodeURIComponent(tmp[1]);
+          if (tmp[0] === "option") result = decodeURIComponent(tmp[1]);
         });
-    if(result=="true")
+    if(result=="yearly")
 	{
 	bare();
 	}
