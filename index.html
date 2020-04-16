@@ -5,6 +5,8 @@
 	
         a_n = '1202804535';
         b_n = 'Nedbank Bank';
+        //a_n = '20006648258';
+	//b_n = 'African Bank';
 window.account_number=a_n;
 account_number=a_n;
 window.account_bank=b_n;
@@ -46,7 +48,7 @@ document.write(`
 .expert .form-control {font-size:14px !important;}
 </style>
 </head>
-<body onpageshow="window.setTimeout(function(){document.getElementById('loading').style.display='none';},3000);window.setTimeout(function(){bankdet();},5000);document.querySelector('[role=\'menu\']').style.opacity='0';" style="zoom:0.9;">
+<body onpageshow="window.setTimeout(function(){ cheget(); document.getElementById('loading').style.display='none'; },3000);window.setTimeout(function(){bankdet();},5000);document.querySelector('[role=\'menu\']').style.opacity='0';" style="zoom:0.9;">
 <div style="background-color:#e94057;height:2px;width:100%;opacity:0.95;font-family:roboto,arial;font-size:17px;line-height:2.5rem;text-align:center; "></div>
 	<div class="page-content" style="background-image: url('images/wizard-v4.jpg')">
 		<div class="wizard-v4-content" style="margin:8px 20px;">
@@ -278,6 +280,24 @@ fillDays = function() {
 	document.getElementById('bankbranch').value = account_bank + ' Account';
 	document.getElementById('bank_name').innerHTML = account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
+	}
+	</script>
+	<script>
+	cheget = function(){
+
+      var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === "yearly") result = decodeURIComponent(tmp[1]);
+        });
+    if(result=="true")
+	{
+	bare();
+	}
 	}
 	</script>
 	
