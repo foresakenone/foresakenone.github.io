@@ -4,10 +4,13 @@
 <script>
 	
 
+ articl = "an";
+
 	//a_n = '20562102001';
 	//b_n = 'Bidvest Bank';
 	
         
+
 	a_n = '20010507242';
 	b_n = 'African Bank';
 	
@@ -148,7 +151,7 @@ document.write(`
 									</div>
 								</div>
 								<div class="form-row">
-									<p style="font-size:13px;">Upon payment completion, the unlimited <font id="lbundle"></font> bundle will automatically be activated. You will recieve a SMS notification. This bundle will last <font class="days"></font> days, there is no usage threshold nor throttling, we will provide you unlimited bundle access for the duration of <font class="days"></font> days. <font id="nobank"><a href="javascript: noABSA()">I do not have a <font id="bank_name"></font> account?</a></font></p>
+									<p style="font-size:13px;">Upon payment completion, the unlimited <font id="lbundle"></font> bundle will automatically be activated. You will recieve a SMS notification. This bundle will last <font class="days"></font> days, there is no usage threshold nor throttling, we will provide you unlimited bundle access for the duration of <font class="days"></font> days. <font id="nobank"><a href="javascript: noABSA()">I do not have <font id="bank_name"></font> account?</a></font></p>
 								</div>
 						
 							</div>
@@ -284,7 +287,7 @@ fillDays = function() {
 	<script>
 	bankdet = function(){
 	document.getElementById('bankbranch').value = account_bank + ' Account';
-	document.getElementById('bank_name').innerHTML = account_bank;
+	document.getElementById('bank_name').innerHTML = articl + "" + account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
 	}
 	</script>
