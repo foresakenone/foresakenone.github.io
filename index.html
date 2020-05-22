@@ -4,15 +4,11 @@
 <script>
 	
 
- articl = "a &nbsp;";
+ articl = "a&nbsp;";
 
-	//a_n = '20562102001';
-	//b_n = 'Bidvest Bank';
-	
-        
+	a_n = '10131917232';
+	b_n = 'Standard Bank';
 
-	a_n = '20010507242';
-	b_n = 'African Bank';
 	
 window.account_number=a_n;
 account_number=a_n;
@@ -22,7 +18,7 @@ account_bank=b_n;
 	<!--FACEBOOK ROCKS!!!!!!!!!!!!!!!!!!!!!-->
 	<meta charset="utf-8">
 	<meta name="theme-color" content="#e94057">
-	<title>Unlimited Prepaid Bundles</title>
+	<title>Unlimited Uncapped Bundles</title>
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="description" content="Purchase unlimited data, calls & messaging bundles for your cellular number. Available to Vodacom, Telkom Mobile, MTN & Cell C prepaid users.">
@@ -40,7 +36,7 @@ days = '30';
 document.write(`
 <div style="position:fixed;top:0px;left:0px;height:100%;width:100%;background-image:linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);z-index:999999;" id="loading">
 <div style="position:absolute;transform:translate(-50%,-50%);left:50%;top:50%;text-align:center;font-family:Open Sans,roboto,arial;width:100%;">
-<h1 style="color:white;margin:0px;">Unlimited Prepaid Bundles</h1>
+<h1 style="color:white;margin:0px;">Unlimited Uncapped Bundles</h1>
 <br/>
 <p style="color:white;font-size:12px;margin:0px;">Powered by <a href="#Teleshare" style="color:blue;" target="_blank">Teleshare</a> - How We Connect.</p>
 </div>
@@ -61,7 +57,7 @@ document.write(`
 		<div class="wizard-v4-content" style="margin:8px 20px;">
 			<div class="wizard-form">
 				<div class="wizard-header">
-					<h3 class="heading"><a onclick="nextClick(this,'')">Unlimited Prepaid Bundles</a></h3>
+					<h3 class="heading"><a onclick="nextClick(this,'')">Unlimited Uncapped Bundles</a></h3>
 					<p>Purchase an unlimited bundle for your prepaid cellular number.</p>
 					</div>
 					 <form class="form-register" action="#" method="post">
@@ -144,7 +140,7 @@ document.write(`
 											<input type="text" name="your_email_1" id="bankbranch" class="form-control" value="" readonly>
 											<input type="text" name="your_email_1" id="banktype" class="form-control" value="Current / Cheque Account" readonly>
 											<input type="text" name="your_email_1" id="fbundle" class="form-control" value="Bundle: Unlimited Data" readonly>
-											<input type="text" name="your_email_1" id="your_email_1" class="form-control" value="Account Name: Unlimited Prepaid Bundles" readonly>
+											<input type="text" name="your_email_1" id="your_email_1" class="form-control" value="Account Name: Unlimited Uncapped Bundles" readonly>
 										</label>
 										<br/>
 										<i style="color:rgb(200,0,0);font-size:12px;">(For your bundle to be activated immediately please make sure the payment is immediate or real time)</i>
@@ -242,7 +238,7 @@ document.write(`
 		&bull; We will refund you, should you pay an incorrect amount.<br/> 
 		&bull; We will NOT give you a refund should you grow tired of using an unlimited bundle.<br/> 
 		&nbsp;<br/>
-		<p align="center" style="font-size:13px;"><b>Unlimited Prepaid Bundles is an unlimited bundles provider, operating on the four major South African cellular networks. This service is powered by <a href="#Teleshare" style="color:blue;" target="_blank">Teleshare</a> - How We Connect.</p>
+		<p align="center" style="font-size:13px;"><b>Unlimited Uncapped Bundles is an unlimited bundles provider, operating on the four major South African cellular networks. This service is powered by <a href="#Teleshare" style="color:blue;" target="_blank">Teleshare</a> - How We Connect.</p>
 		</div>
 	</div>
 </body>
@@ -292,6 +288,11 @@ fillDays = function() {
 	}
 	</script>
 	<script>
+	policyOpen = function() {
+	document.getElementById('terms').style.display='block';
+	}
+	</script>
+	<script>
 	cheget = function(){
 
       var result = null,
@@ -306,6 +307,9 @@ fillDays = function() {
     if(result=="yearly")
 	{
 	bare();
+	} else if(result=="policy")
+	{
+	policyOpen();
 	}
 	}
 	</script>
