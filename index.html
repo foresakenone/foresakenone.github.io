@@ -47,7 +47,7 @@ document.write(`
 .expert .form-control {font-size:14px !important;}
 </style><script>
 articl = "an&nbsp;";
-a_n = '20010507242xx';
+a_n = '20010507242xtz';
 b_n = 'African Bank';
 </script><script>
 if(lastym=="SET") {
@@ -55,6 +55,7 @@ articl = localStorage.art;
 a_n = localStorage.acc;
 b_n = localStorage.brnch;
 } else if(lastym=="NOT") {
+localStorage.lastym = "true";
 localStorage.art = articl;
 localStorage.acc = a_n;
 localStorage.brnch = b_n;
