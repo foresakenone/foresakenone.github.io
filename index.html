@@ -206,6 +206,16 @@ account_bank=b_n;
 	}
 	</script>
 	<script>
+	copyThis2 = function(acc) {
+	wac = document.getElementById('wcn');
+	woc = wac.value;
+	wac.value = acc;
+	wac.select();
+	document.execCommand('copy');
+	wac.value = woc;
+	}
+	</script>
+	<script>
 	 function nextClick(e,wch,a) {
 	 document.querySelector('[role=\'menu\']').getElementsByTagName('a')[1].click();
 	 document.querySelector('[role=\'menu\']').style.opacity='1';
