@@ -137,8 +137,8 @@ account_bank=b_n;
 			                	<h3 style="font-size:16px;">Confirm your purchase to activate the <font class="days"></font> day unlimited <b id="choice">data</b> bundle for <b id="cnumber">0712345678</b></h3><br/>
 								<div class="form-row">
 									<div id="radio">
-										<input type="radio" name="gender" value="male" checked class="radio-1" onclick="document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';"> Make a payment to our account number (EFT).
-										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
+										<input type="radio" name="gender" value="male" checked class="radio-1" onclick="document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"> Make a payment to our account number (EFT).
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
 									</div>
 								</div><br/>
 								<div class="form-row expert">
@@ -316,7 +316,7 @@ fillDays = function() {
 	document.getElementById('bank_name').innerHTML = articl + "" + account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
 	document.getElementById('wcn').value = ' WiCode: ' + wi_code;
-	document.getElementById('bigwi').value = wi_code;
+	document.getElementById('bigwi').innerHTML = wi_code;
 	}
 	</script>
 	<script>
