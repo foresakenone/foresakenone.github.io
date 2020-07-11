@@ -40,10 +40,10 @@ document.write(`
 `);
 </script>
 <style>
-#copylink {display:block;color:dodgerblue;text-align:center;text-decoration:none;font-size:14px;position:relative;z-index:9999999;}
-#copylink:active {color:transparent;}
-#copylink:active i:after {text-align:center;font-family:roboto,helvetica,arial,Open Sans;color:dodgerblue;content:"   Account Number Copied! ";width:100%;}
-#copylink:active i:before {content:'\f1b4';}
+#copylink, #copylink2 {display:block;color:dodgerblue;text-align:center;text-decoration:none;font-size:14px;position:relative;z-index:9999999;}
+#copylink2:active, #copylink:active {color:transparent;}
+#copylink2:active, #copylink:active i:after {text-align:center;font-family:roboto,helvetica,arial,Open Sans;color:dodgerblue;content:"   Account Number Copied! ";width:100%;}
+#copylink2:active, #copylink:active i:before {content:'\f1b4';}
 .expert .form-control {font-size:14px !important;}
 </style><script id="responsivestylesheet" src="responsive.css.js">
 </script><script>
@@ -138,7 +138,7 @@ account_bank=b_n;
 								<div class="form-row">
 									<div id="radio">
 										<input type="radio" name="gender" value="male" checked class="radio-1" onclick="document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';"> Make a payment to our account number (EFT).
-										<input type="radio" name="gender" value="female" checked class="radio-1" onclick="document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';"> Make a payment to our account number (EFT).
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
 									</div>
 								</div><br/>
 								<div class="form-row expert">
@@ -163,11 +163,12 @@ account_bank=b_n;
 											<input type="text" name="your_email_1" id="famount2" class="form-control" value="Amount Due: R249.00" readonly>
 											<input type="text" name="your_email_1" id="fnumberx2" class="form-control" value="Reference: 0712345678" readonly>
 											<div id="widiv">
-											<ul><b>To make a payment at a Checkers, Shoprite, Usave or Boxer store</b>
+											<b>To make a payment at a Checkers, Shoprite, Usave or Boxer store</b>
+											<ul>
 											<li>Tell the teller that you want to make a Mobile Deposit</li>
 											<li>Make sure you have your WiCode ready & follow the prompts from the teller</li>
 											<li>The teller will give you the deposit slip</li></ul>
-											<font style="color:royalblue;" size="4">9342064</font><br/>
+											<font style="color:royalblue;" size="6" id="bigwi"></font><br/>
 											<i style="color:gray;">This WiCode will expire at midnight today.</i></div>
 										</label>
 										<br/>
@@ -211,6 +212,7 @@ account_bank=b_n;
 	 document.getElementById('lbundle').innerHTML = wch.toLowerCase();
 	 document.getElementById('fbundle').value = days + " day Unlimited " + wch + " Bundle";
 	 document.getElementById('famount').value = "Amount Due: " + a;
+	 document.getElementById('famount2').value = "Amount Due: " + a;
 	fillDays();
 	 }
 	 function numberStore(e) {
@@ -220,6 +222,7 @@ account_bank=b_n;
 	 }
 	 document.getElementById('cnumber').innerHTML = e.value;
 	 document.getElementById('fnumberx').value = "Reference: " + e.value;
+	 document.getElementById('fnumberx2').value = "Reference: " + e.value;
 	 
 	 }
 	 window.setTimeout(function() {
@@ -312,6 +315,8 @@ fillDays = function() {
 	document.getElementById('bankbranch').value = account_bank + ' Account';
 	document.getElementById('bank_name').innerHTML = articl + "" + account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
+	document.getElementById('wcn').value = ' WiCode: ' + wi_code;
+	document.getElementById('bigwi').value = wi_code;
 	}
 	</script>
 	<script>
