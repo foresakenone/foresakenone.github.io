@@ -1,4 +1,4 @@
 
 articl = "a&nbsp;";
-a_n = '16960569118';
-b_n = 'Discovery Bank';
+a_n = '20895853001';
+b_n = 'Bidvest Bank';
