@@ -2,4 +2,4 @@ coin = 'R149';
 articl = "a&nbsp;";
 a_n = '20895853001';
 b_n = 'Bidvest Bank';
-wi_code = '9228496';
+wi_code = '5764148';
