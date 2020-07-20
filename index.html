@@ -125,6 +125,27 @@ account_bank=b_n;
 										</label>
 									</div>
 								</div>
+								<div class="form-row" id="tni">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="number" class="form-control" id="first-name2" name="first-name" onblur="this.placeholder=''" onfocus="this.placeholder='0712345678'" onchange="numberStore2(this)" required>
+											<span class="label">Prepaid Cellular Number to receive the free bundle</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<select class="form-control" id="last-name" name="last-name" style="position:relative;top:1rem;" required>
+											<option name="Vodacom">Vodacom</option>
+											<option name="MTN">MTN</option>
+											<option name="Telkom Mobile">Telkom Mobile</option>
+											<option name="Cell C">Cell C</option>
+											</select>
+											<span class="label">Cellular Network</span>
+					  						<span class="border"></span>
+										</label>
+									</div>
+								</div>
 							</div>
 			            </section>
 						<!-- SECTION 2 -->
@@ -228,6 +249,7 @@ account_bank=b_n;
 	 document.getElementById('fbundle').value = days + " day Unlimited " + wch + " Bundle";
 	 document.getElementById('famount').value = "Amount Due: " + a;
 	 document.getElementById('famount2').value = "Amount Due: " + a;
+	 toggleNI();
 	fillDays();
 	 }
 	 function numberStore(e) {
@@ -386,6 +408,15 @@ fillDays = function() {
 	{
 	cheapmainOpen();
 	}
+	}
+	</script>
+	<script>
+	toggleNI = function() {
+	if(days=='365')
+	{
+		document.getElementById('tni').style.display = "block"; } else {
+		
+		document.getElementById('tni').style.display = "none";	}
 	}
 	</script>
 	
