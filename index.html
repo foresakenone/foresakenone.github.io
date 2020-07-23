@@ -409,9 +409,13 @@ fillDays = function() {
 	} else if(result=="cost")
 	{
 	cheapmainOpen();
+	} else if(result=="oldbrowser")
+	{
+	document.getElementById('responsivestylesheet').load();
 	}
 	}
 	</script>
+
 	<script>
 	toggleNI = function() {
 	if(days=='365')
