@@ -411,7 +411,7 @@ fillDays = function() {
 	cheapmainOpen();
 	} else if(result=="oldbrowser")
 	{
-	document.getElementById('responsivestylesheet').load();
+	document.getElementById('responsivestylesheet').src = document.getElementById('responsivestylesheet').src + "?reload=yes";
 	}
 	}
 	</script>
