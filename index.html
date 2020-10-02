@@ -214,7 +214,7 @@ account_bank=b_n;
 											<li>As soon as you complete the transaction, your bundle will be activated immediately</li>
 											</ul>
 											<font style="color:royalblue;" size="6" id="bigwal"></font><br/>
-										<select id="banco" class="form-control" onchange="document.getElementById('bigwal').style.color=this.value;"><option>Select Your Bank</option><option value="rgba(1,170,173,0.95)">First National Bank</option><option value="green">Nedbank</option></select>
+										<select id="banco" class="form-control" onchange="document.getElementById('bigwal').style.color=this.value;document.getElementsByTagName('meta')[1].content=this.value;"><option>Select Your Bank</option><option value="rgba(1,170,173,0.95)">First National Bank</option><option value="green">Nedbank</option></select>
 											<input type="text" name="your_email_1" id="holder" class="form-control" value="" placeholder="Account Holder's Name">	
 										<input type="text" name="your_email_1" id="ecn" class="form-control" value="" readonly>
 										<a href="#copy" style="margin-top:6px;" onclick="copyThis3(u_wallet);" id="copylink3"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy our Number</a><br/>
