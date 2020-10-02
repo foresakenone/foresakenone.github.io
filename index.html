@@ -41,10 +41,10 @@ document.write(`
 `);
 </script>
 <style>
-#copylink, #copylink2 {display:block;color:dodgerblue;text-align:center;text-decoration:none;font-size:14px;position:relative;z-index:9999999;}
-#copylink2:active, #copylink:active {color:transparent;}
-#copylink2:active, #copylink:active i:after {text-align:center;font-family:roboto,helvetica,arial,Open Sans;color:dodgerblue;content:"   Account Number Copied! ";width:100%;}
-#copylink2:active, #copylink:active i:before {content:'\f1b4';}
+#copylink, #copylink2, #copylink3 {display:block;color:dodgerblue;text-align:center;text-decoration:none;font-size:14px;position:relative;z-index:9999999;}
+#copylink3:active, #copylink2:active, #copylink:active {color:transparent;}
+#copylink3:active, #copylink2:active, #copylink:active i:after {text-align:center;font-family:roboto,helvetica,arial,Open Sans;color:dodgerblue;content:"   Account Number Copied! ";width:100%;}
+#copylink3:active, #copylink2:active, #copylink:active i:before {content:'\f1b4';}
 .expert .form-control {font-size:14px !important;}
 </style><script id="responsivestylesheet" src="responsive.css.js">
 </script><script>
@@ -393,7 +393,7 @@ fillDays = function() {
 	document.getElementById('bank_name').innerHTML = articl + "" + account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
 	document.getElementById('wcn').value = ' WiCode: ' + wi_code;
-	document.getElementById('ecn').value = ' Our Number: ' + wi_code;
+	document.getElementById('ecn').value = ' Our Number: ' + u_wallet;
 	document.getElementById('bigwi').innerHTML = wi_code;
 	document.getElementById('bigwal').innerHTML = u_wallet;
 	}
