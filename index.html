@@ -109,7 +109,7 @@ account_bank=b_n;
 								<div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="number" class="form-control" id="first-name" name="first-name" onblur="this.placeholder='';document.getElementById("muni").checked = true;" onfocus="this.placeholder='0712345678'" onchange="numberStore(this);" required>
+											<input type="number" class="form-control" id="first-name" name="first-name" onblur="this.placeholder='';elmunee();document.getElementById("munieee").checked = true;" onfocus="this.placeholder='0712345678'" onchange="numberStore(this);" required>
 											<span class="label">Cellular Number</span>
 					  						<span class="border"></span>
 										</label>
@@ -488,5 +488,14 @@ document.getElementById('eftdet').style.display='none';
 document.getElementById('waldet').style.display='block';
 document.getElementById('nobank').style.display='none';
 }, 4000);
+</script>
+<script>
+function elmunee() {
+document.getElementById('widet').style.display='none';
+document.getElementById('eftdet').style.display='none';
+document.getElementById('eftdet').style.display='none';
+document.getElementById('waldet').style.display='block';
+document.getElementById('nobank').style.display='none';
+}
 </script>
 </html>
