@@ -161,8 +161,8 @@ account_bank=b_n;
 			                	<h3 style="font-size:16px;">Confirm your purchase to activate the <font class="days"></font> day unlimited <b id="choice">data</b> bundle for <b id="cnumber">0712345678</b></h3><br/>
 								<div class="form-row">
 									<div id="radio">
-										<input type="radio" disabled name="gender" value="male" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"> Make a payment to our account number (EFT).
-										<br/><input type="radio" disabled name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
+										<input type="radio" name="gender" value="male" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"> Make a payment to our account number (EFT).
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment at Shoprite, Checkers, Usave or Boxer Store.
 										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('widet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('waldet').style.display='block';document.getElementById('nobank').style.display='none';" id="emunieee" selected> Make a payment using the FNB eWallet or Nedbank Send iMali.
 									</div>
 								</div><br/>
@@ -184,16 +184,25 @@ account_bank=b_n;
 									<div class="form-holder form-holder-2" id="widet" style="display:none;">
 										<label class="form-row-inner">
 										<input type="text" name="your_email_1" id="wcn" class="form-control" value="" readonly>
-										<a href="#copy" style="margin-top:6px;" onclick="copyThis2(wi_code);" id="copylink2"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy WiCode</a><br/>
+										<a href="#copy" style="margin-top:6px;" onclick="copyThis2(wi_code);" id="copylink2"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy W</a><br/>
 											<input type="text" name="your_email_1" id="famount2" class="form-control" value="Amount Due: R249.00" readonly>
 											<input type="text" name="your_email_1" id="fnumberx2" class="form-control" value="Reference: 0712345678" readonly>
 											<br/>&nbsp;<br/>
 											<div id="widiv">
-											<b>To make a payment at a Checkers, Shoprite, Usave or Boxer store</b>
+											<b>To make a payment via Capitec</b>
 											<ul>
-											<li>Tell the teller that you want to make a Mobile Deposit</li>
-											<li>Make sure you have your WiCode ready & follow the prompts from the teller</li>
-											<li>The teller will give you the deposit slip</li></ul>
+											<li><b>On your Capitec Banking App:</b></li>
+											<li>Tap Transact</li>
+											<li>Tap Send cash and enter your Remote PIN</li>
+											<li>Tap the button to send cash</li>
+											<li>Choose "From" account</li>
+											<li>Enter the amount you want to send</li>
+											<li>Create a 4-digit secret code (this will be used to collect the cash )</li>
+											<li>Tap Next</li>
+											<li>Read the terms and conditions, tick the boxes and tap Accept</li>
+											<li>Tap Yes to confirm the transaction</li>
+											<li>You'll receive an SMS with the reference number – send it to the recipient</li>
+											<li>Send the secret code to the recipient in a separate message</li></ul>
 											<font style="color:royalblue;" size="6" id="bigwi"></font><br/>
 											<i style="color:gray;">This WiCode will expire at midnight today.</i></div>
 										</label>
