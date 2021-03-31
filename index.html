@@ -164,23 +164,38 @@ account_bank=b_n;
 									<input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('widet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('waldet').style.display='block';document.getElementById('nobank').style.display='none';" id="emunieee" selected> Make a payment using the FNB eWallet or Nedbank Send iMali.<br/>
 										<input type="radio" name="gender" value="male" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"> Make a payment via Standard Bank/Spar Instant Cash Voucher.
 										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"> Make a payment via Capitec.
-										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('widet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('waldet').style.display='block';document.getElementById('nobank').style.display='none';" id="emunieee" selected> Make a payment using the FNB eWallet or Nedbank Send iMali.
+										<br/>
 									</div>
 								</div><br/>
 								<div class="form-row expert">
 									<div class="form-holder form-holder-2" id="eftdet">
 										<label class="form-row-inner">
-										<input type="text" name="your_email_1" id="acn" class="form-control" value="" readonly>
-										<a href="#copy" style="margin-top:6px;" onclick="copyThis(account_number);" id="copylink"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy Account Number</a><br/>
+										<a href="#copy" style="margin-top:6px;" onclick="copyThis(u_wallet);" id="copylink"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy Our Number</a><br/>
 											<input type="text" name="your_email_1" id="famount" class="form-control" value="Amount Due: R249.00" readonly>
 											<input type="text" name="your_email_1" id="fnumberx" class="form-control" value="Reference: 0712345678" readonly>
-											<input type="text" name="your_email_1" id="bankbranch" class="form-control" value="" readonly>
-											<input type="text" name="your_email_1" id="banktype" class="form-control" value="Current / Cheque Account" readonly>
 											<input type="text" name="your_email_1" id="fbundle" class="form-control" value="Bundle: Unlimited Data" readonly>
-											<input type="text" name="your_email_1" id="your_email_1" class="form-control" value="Account Name: Unlimited Premium Bundles" readonly>
+											
 										</label>
 										<br/>
-										<i style="color:rgb(200,0,0);font-size:12px;">(For your bundle to be activated immediately please make sure the payment is immediate or real time)</i>
+										<b>To make a payment via Standard bank</b>
+											<ul>
+											<li>Access Instant Money through online banking, mobile app, cellphone banking  or at our ATMs</li>
+											</ul><br/>
+											<font size="2">For more information on sending money via Standard Bank <a href="https://www.standardbank.co.za/southafrica/personal/products-and-services/ways-to-bank/innovative-payment-solutions/instant-money">click here</a>.</font>
+											<br/>
+										<br/>
+										<b>To make a payment via Spar Instant Cash Voucher</b>
+											<ul>
+											<li>Present your SA ID at the till point</li>
+											<li>Provide our cellphone number: 0826374710</li>
+											<li>Say how much you want to send</li>
+											<li>The sender’s fee is deducted from the amount you pay</li>
+											<li>Select a release PIN</li>
+											<li>We will be sent a notification with the voucher number</li>
+											<li>You share the release PIN with us via SMS to 0826374710, along with your reference which is your number.</li>
+											</ul><br/>
+											<font size="2">For more information on sending money via Spar <a href="https://www.standardbank.co.za/southafrica/personal/products-and-services/ways-to-bank/innovative-payment-solutions/instant-money">click here</a>.</font>
+											<br/>
 									</div>
 									<div class="form-holder form-holder-2" id="widet" style="display:none;">
 										<label class="form-row-inner">
@@ -190,7 +205,7 @@ account_bank=b_n;
 											<input type="text" name="your_email_1" id="fnumberx2" class="form-control" value="Reference: 0712345678" readonly>
 											<br/>&nbsp;<br/>
 											<div id="widiv">
-											<b>To make a payment via Capitec</b>
+											<b>To make a payment via Capitec Bank</b>
 											<ul>
 											<li><b>On your Capitec Banking App:</b></li>
 											<li>Tap Transact</li>
@@ -207,6 +222,8 @@ account_bank=b_n;
 											<li>Send the secret code to or number in a separate message along with your reference which is your number.</li>
 											<li>As soon as the payment is collected, you will recieve an SMS stating that your unlimited bundle has been activated.</li>
 											</ul><br/>
+											<font size="2">For more information on sending money via Capitec <a href="https://www.capitecbank.co.za/global-one/transact/ways-to-transact/send-cash-anywhere/">click here</a>.</font>
+											<br/>
 											</div>
 										</label>
 										<br/>
