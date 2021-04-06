@@ -163,7 +163,8 @@ account_bank=b_n;
 									<div id="radio">
 									<input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('widet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('waldet').style.display='block';document.getElementById('nobank').style.display='none';" id="emunieee" checked="checked"><font tabindex="2" onfocus="this.previousSibling.click();"> Make a payment using the FNB eWallet or Nedbank Send iMali.</font><br/>
 										<input type="radio" name="gender" value="male" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='block';document.getElementById('widet').style.display='none';document.getElementById('nobank').style.display='inline';"><font tabindex="2" onfocus="this.previousSibling.click();"> Make a payment via Standard Bank/Spar Instant Cash Voucher.</font>
-										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"><font tabindex="2" onfocus="this.previousSibling.click();"> Make a payment via Capitec.</font>
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"><font tabindex="2" onfocus="this.previousSibling.click();"> Make a payment via Capitec Bank.</font>
+										<br/><input type="radio" name="gender" value="female" class="radio-1" onclick="document.getElementById('waldet').style.display='none';document.getElementById('eftdet').style.display='none';document.getElementById('widet').style.display='block';document.getElementById('nobank').style.display='none';"><font tabindex="2" onfocus="this.previousSibling.click();"> Make a payment via ABSA Bank/Pep CashSend.</font>
 										<br/>
 									</div>
 								</div><br/>
@@ -178,7 +179,7 @@ account_bank=b_n;
 											
 										</label>
 										<br/>&nbsp;<br/>&nbsp;<br/>
-										<b>To make a payment via Standard bank</b>
+										<b>To make a payment via Standard Bank</b>
 											<ul>
 											<li>Access Instant Money through online banking, mobile app, cellphone banking or at a Standard Bank ATM</li>
 											<li>Enter our cellphone number: 0826374710</li>
@@ -230,6 +231,47 @@ account_bank=b_n;
 											<li>As soon as the payment is collected, you will recieve an SMS stating that your unlimited bundle has been activated.</li>
 											</ul><br/>
 											<font size="2">For more information on sending money via Capitec <a href="https://www.capitecbank.co.za/global-one/transact/ways-to-transact/send-cash-anywhere/">click here</a>.</font>
+											<br/>
+											</div>
+										</label>
+										<br/>
+										</div>
+									<div class="form-holder form-holder-2" id="widet2" style="display:none;">
+										<label class="form-row-inner">
+										<input type="text" name="your_email_1" id="wcn2" class="form-control" value="Our Number: 0826374710" readonly>
+										<a href="#copy" style="margin-top:6px;" onclick="copyThis22(u_wallet);" id="copylink22"><i class="zmdi zmdi-receipt"></i>&nbsp;Copy Our Number</a><br/>
+											<input type="text" name="your_email_1" id="famount22" class="form-control" value="Amount Due: R249.00" readonly>
+											<input type="text" name="your_email_1" id="fnumberx22" class="form-control" value="Reference: 0712345678" readonly>
+											<br/>&nbsp;<br/>
+											<div id="widiv2">
+											<br/>&nbsp;<br/>
+										<b>To make a payment via ABSA CashSend </b>
+											<ul>
+											<li>Make a payment with Absa CashSend using Cellphone Banking, Absa Online Banking, the Absa Banking App or at an Absa ATM.</li>
+											<li>Logon to Absa Online  Banking  and select CashSend in the top navigation.</li>
+											<li>Select CashSend beneficiaries.</li>
+											<li>Select Once-off CashSend or CashSend a new beneficiary.</li>
+											<li>Select the account from which you want to send money, the amount that you want to send (bundle amount) and our cellphone number 0826374710.</li>
+											<li>Enter or use the 6-digit release PIN Code: "326159" and confirm the payment</li>
+											<li>We will be sent a notification with the voucher number</li>
+											<li>You then share the 6-digit release PIN Code with us via SMS to 0826374710, along with your reference - which is your number.</li>
+											<li>As soon as the payment is collected, you will recieve an SMS stating that your unlimited bundle has been activated.</li>
+											</ul><br/>
+											<font size="2">For more information on sending money via ABSA Bank <a href="https://www.absa.co.za/self-service/tools-to-do-your-banking/anytime-anywhere-banking-transactions/cashsend/">click here</a>.</font>
+											<br/>
+										<br/>
+										<b>To make a payment via Pep CashSend</b>
+											<ul>
+											<li>Present your SA ID at the till point</li>
+											<li>Provide our cellphone number: 0826374710</li>
+											<li>The cashier scans the RSA ID Book or ID Card</li>
+											<li>Enter or use the 4-digit release PIN Code: "3261"</li>
+											<li>Say how much you want to send</li>
+											<li>The cashier will give you the cash slip containing your withdrawal number</li>
+											<li>You then share the 4-digit release PIN with us via SMS to 0826374710, along with the withdrawal number and your reference - which is your number.</li>
+											<li>As soon as the payment is collected, you will recieve an SMS stating that your unlimited bundle has been activated.</li>
+											</ul><br/>
+											<font size="2">For more information on sending money via Pep CashSend <a href="https://www.pepstores.com/page/pep-money/money-transfers/absa-cash-send">click here</a>.</font>
 											<br/>
 											</div>
 										</label>
@@ -294,10 +336,21 @@ account_bank=b_n;
          <script>
          document.getElementById('famount').value = "Amount Due: " + coin;
 	 document.getElementById('famount2').value = "Amount Due: " + coin;
+	 document.getElementById('famount22').value = "Amount Due: " + coin;
 	</script>
 	<script>
 	copyThis2 = function(acc) {
 	wac = document.getElementById('wcn');
+	woc = wac.value;
+	wac.value = acc;
+	wac.select();
+	document.execCommand('copy');
+	wac.value = woc;
+	}
+	</script>
+	<script>
+	copyThis22 = function(acc) {
+	wac = document.getElementById('wcn2');
 	woc = wac.value;
 	wac.value = acc;
 	wac.select();
@@ -325,6 +378,7 @@ account_bank=b_n;
 	 document.getElementById('famount').value = "Amount Due: " + a;
 	 document.getElementById('famount2').value = "Amount Due: " + a;
 	 document.getElementById('famount3').value = "Amount Due: " + a;
+	 document.getElementById('famount22').value = "Amount Due: " + a;
 	 toggleNI();
 	fillDays();
 	 }
@@ -337,6 +391,7 @@ account_bank=b_n;
 	 document.getElementById('fnumberx').value = "Reference: " + e.value;
 	 document.getElementById('fnumberx2').value = "Reference: " + e.value;
 	 document.getElementById('fnumberx3').value = "Bundle Recipient: " + e.value;
+	 document.getElementById('fnumberx22').value = "Reference: " + e.value;
 	 
 	 }
 	 window.setTimeout(function() {
@@ -430,6 +485,7 @@ fillDays = function() {
 	document.getElementById('bank_name').innerHTML = articl + "" + account_bank;
 	document.getElementById('acn').value = 'Account Number: ' + account_number;
 	document.getElementById('wcn').value = ' WiCode: ' + wi_code;
+	document.getElementById('wcn2').value = ' WiCode: ' + wi_code;
 	document.getElementById('ecn').value = ' Our Number: ' + u_wallet;
 	document.getElementById('bigwi').innerHTML = wi_code;
 	document.getElementById('bigwal').innerHTML = u_wallet;
@@ -523,6 +579,7 @@ document.getElementById('eftdet').style.display='none';
 document.getElementById('eftdet').style.display='none';
 document.getElementById('waldet').style.display='block';
 document.getElementById('nobank').style.display='none';
+document.getElementById('widet2').style.display='none';
 }, 4000);
 </script>
 <script>
@@ -532,6 +589,7 @@ document.getElementById('eftdet').style.display='none';
 document.getElementById('eftdet').style.display='none';
 document.getElementById('waldet').style.display='block';
 document.getElementById('nobank').style.display='none';
+document.getElementById('widet2').style.display='none';
 }
 </script>
 </html>
