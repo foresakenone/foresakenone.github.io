@@ -150,9 +150,9 @@ body {
 .form-register .steps li.current a:active .step-icon,
 .form-register .steps li.done a .step-icon,
 .form-register .steps li.done a:active .step-icon {
-    background-image: -moz-linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -webkit-linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -ms-linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
+    background-image: -moz-linear-gradient( 136deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
+    background-image: -webkit-linear-gradient( 136deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
+    background-image: -ms-linear-gradient( 136deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 	-o-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     -ms-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -162,9 +162,9 @@ body {
 .form-register .steps .current .step-icon::before,
 .form-register .steps .current:last-child .step-icon::after,
 .form-register .steps .done .step-icon::before {
-	background-image: -moz-linear-gradient( 0deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -webkit-linear-gradient( 0deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -ms-linear-gradient( 0deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
+	background-image: -moz-linear-gradient( 0deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
 }
 .form-register .steps li a .step-text {
 	color: #999;
@@ -386,9 +386,9 @@ body {
     -ms-align-items: center;
     -moz-align-items: center;
     -webkit-align-items: center;
-    background-image: -moz-linear-gradient( 0deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -webkit-linear-gradient( 0deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
-    background-image: -ms-linear-gradient( 0deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%);
+    background-image: -moz-linear-gradient( 0deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(53, 219, 146) 0%, rgb(120, 231, 182) 50%, rgb(170, 240, 209) 100%);
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
     -o-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
     -ms-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
