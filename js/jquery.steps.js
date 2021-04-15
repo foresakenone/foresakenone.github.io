@@ -281,7 +281,7 @@ function finishStep(wizard, state)
 
     if (wizard.triggerHandler("finishing", [state.currentIndex]))
     {
-		alert('Please make sure you have made the payment and followed the steps. Upon us recieving the payment, you will recieve an SMS stating that your unlimited bundle has been activated.');
+		alert('Please make sure you have made the payment and followed the steps. Upon us receiving the payment, you will receive an SMS stating that your unlimited bundle has been activated.');
         currentStep.addClass("done").removeClass("error");
         wizard.triggerHandler("finished", [state.currentIndex]);
     }
